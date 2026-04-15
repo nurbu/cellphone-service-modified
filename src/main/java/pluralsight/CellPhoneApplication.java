@@ -70,9 +70,13 @@ public class CellPhoneApplication {
         newPhone2.setCarrier(carrier2);
         newPhone2.setPhoneNumber(phoneNumber2);
         newPhone2.setOwner(owner2);
-
+        // Printing phone information
         display(newPhone1);
         display(newPhone2);
+
+        //Calling phones
+        newPhone1.dial(newPhone2.getPhoneNumber());
+        newPhone2.dial(newPhone1.getPhoneNumber());
 
         scanner.close();
     }
